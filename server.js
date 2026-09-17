@@ -8,6 +8,7 @@ const user = {
 };
 
 http.createServer((req, res) => {
+    res.setHeader('Access-Control-Allow-Origin')
     res.writeHead(200, {'content-type': 'application/json'});
     res.end(JSON.stringify({
         name: 'Venicius Farias',
@@ -15,3 +16,4 @@ http.createServer((req, res) => {
         age: 29
     }));
 }).listen(3000);
+
